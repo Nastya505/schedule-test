@@ -1,0 +1,82 @@
+.inputWrapper {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 13px 15px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 10;
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: inherit;
+  padding: 0;
+  z-index: 10;
+  color: var(--text-color);
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.list {
+  display: grid;
+  grid-template-rows: 0fr;
+  gap: 6px;
+  position: absolute;
+  margin: 7px 0 0 0;
+  width: 100%;
+  top: calc(100% - 1px);
+  left: 0;
+  list-style: none;
+  border-radius: 10px;
+  background-color: inherit;
+  overflow: hidden;
+  z-index: 10;
+  padding: 0;
+  transition: all 0.3s;
+  max-height: 0;
+  opacity: 0;
+}
+
+.list li {
+  color: var(--text-color-b);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  padding-inline: 20px;
+  line-height: 30px;
+  width: 100%;
+  z-index: 10;
+}
+
+.list li:last-child {
+  padding-bottom: 20px;
+}
+.list li:first-child {
+  padding-top: 20px;
+}
+
+.list li:only-child {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.show {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  max-height: 300px;
+  transition: all 0.5s;
+  z-index: 10;
+}
