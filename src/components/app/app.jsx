@@ -8,9 +8,12 @@ import styles from "./app.module.css";
 function App() {
   // какая группа выбрана
   const [selectedGroup, setSelectedGroup] = useState("");
+
   return (
     <div className={styles.app}>
-      <Header handleGroupChange={setSelectedGroup} />   
+      {/* <div className={styles.headerWrapper}> */}
+        <Header handleGroupChange={setSelectedGroup} />   
+      {/* </div> */}
       <Schedule group={selectedGroup} />
     </div>
   )

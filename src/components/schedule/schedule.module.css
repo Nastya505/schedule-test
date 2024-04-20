@@ -65,10 +65,12 @@
     z-index: 1;
 }
 .iconLeft{
-    transform: translate(-5%, 10%);
+    margin-top: 2px;
+    margin-left: -2px;
 }
 .iconRight{
-    transform: translate(5%, 10%);
+    margin-top: 2px;
+    margin-right: -2px;
 }
 
 .border{
@@ -79,10 +81,10 @@
 }
 
 .sliderWeeksWrapper {
-    max-width: 380px;
-    width: 100%;
+    width: 301%;
     box-sizing: border-box;
     overflow-x: hidden;
+
 }
 
 .sliderWeeks {
@@ -90,6 +92,6 @@
     width: 100%;
     transition: all .5s;
     box-sizing: border-box;
-    gap: 4px;
-    padding-inline: 2px;
+    gap: 9px;
+    padding-inline: 5px;
 }

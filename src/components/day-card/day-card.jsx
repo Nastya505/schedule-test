@@ -195,7 +195,7 @@ const DayCard = ({ day }) => {
           <span
             style={{
               ...(clicked ? { opacity: 0 } : { opacity: 1 }),
-              ...(!allClassDistance && { maxWidth: "100%" }),
+              ...(!allClassDistance && { maxWidth: "130px" }),
             }}
             className={styles.text}
           >

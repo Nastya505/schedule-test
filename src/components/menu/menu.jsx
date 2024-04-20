@@ -8,7 +8,6 @@ const Menu = ({isOpen}) => {
   return (
     <div id="menu" className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
         <Theme/>
-        <p>Расписание звонков</p>
       </div>
   )
 }

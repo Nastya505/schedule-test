@@ -9,7 +9,7 @@
     align-items: flex-start;
     flex-direction: column;
     overflow: hidden;
-    transition: all .3s;
+    transition: all .5s;
     color: var(--text-color);
     z-index: 1;
 }
@@ -152,4 +152,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 360px){
+    .text{
+        max-width: 5ch;
+  
+    }
 }

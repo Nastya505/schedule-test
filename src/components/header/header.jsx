@@ -48,10 +48,9 @@ const Header = ({ handleGroupChange }) => {
         border: "1px solid #444C56",
         height: "80px",
         padding: "15px",
-        margin: 0,
         alignItems: "end",
         justifyContent: "flex-end",
-        duration: 0.3,
+        duration: .1,
         boxShadow:"0px 4px 4px 0px #00000040"
       });
 
@@ -64,7 +63,7 @@ const Header = ({ handleGroupChange }) => {
           backgroundColor: "#3C444D",
           opacity: 1,
           color: "var(--text-color-d)",
-          duration: 0.05,
+          duration: 0.5,
         }
       );
 
@@ -91,7 +90,7 @@ const Header = ({ handleGroupChange }) => {
         handleGroupChange={handleGroupChange}
       />
       <Menu isOpen={isOpen} />
-    </div>
+    </div> 
   );
 };
 

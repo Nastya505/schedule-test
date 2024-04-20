@@ -1,7 +1,11 @@
 .app {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: top;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.headerWrapper {
   padding: 5px;
 }

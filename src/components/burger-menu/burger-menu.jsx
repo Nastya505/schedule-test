@@ -15,7 +15,7 @@ const BurgerMenu = ({ isOpen, setIsOpen }) => {
         .fromTo(
           "#header",
           { height: "80px", justifyContent: "flex-start", duration: 0.05 },
-          { height: "180px", justifyContent: "flex-start", duration: 0.1 }
+          { height: "130px", justifyContent: "flex-start", duration: 0.1 }
         )
         .fromTo(
           "#menu",

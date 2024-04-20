@@ -94,12 +94,12 @@ function Schedule({ group }) {
           style={{
             transform: `translateX(${
               week === prevWeek
-                ? "0%"
+                ? "33.3%"
                 : week === nextWeek
-                ? "-200%"
+                ? "-33.3%"
                 : week === currentWeek
-                ? "-100%"
-                : "-100%"
+                ? "0%"
+                : "0%"
             })`,
           }}
         >
