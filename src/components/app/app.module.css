@@ -5,7 +5,5 @@
   align-items: top;
   overflow-x: hidden;
   height: 100vh;
-}
-.headerWrapper {
-  padding: 5px;
+  position: relative;
 }

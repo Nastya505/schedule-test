@@ -11,9 +11,7 @@ function App() {
 
   return (
     <div className={styles.app}>
-      {/* <div className={styles.headerWrapper}> */}
         <Header handleGroupChange={setSelectedGroup} />   
-      {/* </div> */}
       <Schedule group={selectedGroup} />
     </div>
   )

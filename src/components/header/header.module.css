@@ -1,6 +1,7 @@
 .header {
-  position: sticky;
-  top: 0;
+  position: relative;
+  /* position: sticky; */
+  /* top: 0; */
   display: flex;
   max-width: 100%;
   flex-direction: column;
