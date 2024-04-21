@@ -371,7 +371,47 @@
                   "start": "11:30",
                   "end": "13:05"
                 },
-                "course": "Граф. дизайн",
+                "course": "Иностр яз",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "13:45",
+                  "end": "15:20"
+                },
+                "course": "Иностр яз",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 5,
+                "time": {
+                  "start": "15:30",
+                  "end": "17:05"
+                },
+                "course": "Иностр яз",
                 "rooms": [
                   {
                     "place": "college",
@@ -417,6 +457,36 @@
             "day": "Пятница",
             "date": "26 апреля",
             "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:00",
+                  "end": "09:35"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "distance",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "09:45",
+                  "end": "11:20"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "distance",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
               {
                 "lesson": 3,
                 "time": {

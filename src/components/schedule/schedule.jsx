@@ -48,7 +48,7 @@ function Schedule({ group }) {
             {prevWeek && (
               <div className={styles.buttonWrapperPrev}>
                 <button onClick={() => handleClick(prevWeek)} className={styles.button}>
-                <svg className={styles.iconLeft} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.iconLeft} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
                 </svg>
 
@@ -62,7 +62,7 @@ function Schedule({ group }) {
               <div className={styles.buttonWrapperNext}>
                 <hr className={styles.border} />
                 <button onClick={() => handleClick(nextWeek)} className={styles.button}>
-                <svg className={styles.iconRight} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.iconRight} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
                 </svg>
                   {/* <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={14} /> */}
@@ -75,7 +75,7 @@ function Schedule({ group }) {
             <span className={styles.text}>Следующая неделя</span>
             <div className={styles.buttonWrapperPrev}>
               <button onClick={() => handleClick(currentWeek)} className={styles.button}>
-                <svg className={styles.iconLeft} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.iconLeft} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
                 </svg>
                 {/* <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={14} /> */}
@@ -90,7 +90,7 @@ function Schedule({ group }) {
               <div className={styles.buttonWrapperNext}>
                 <hr className={styles.border} />
                 <button onClick={() => handleClick(currentWeek)} className={styles.button}>
-                  <svg className={styles.iconRight} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className={styles.iconRight} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
                   </svg>
                   {/* <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={14} /> */}

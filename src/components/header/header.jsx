@@ -78,19 +78,21 @@ const Header = ({ handleGroupChange }) => {
   };
 
   return (
-    <div className={styles.header} id="header">
-        <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div className={styles.title} id="title">
-          <p>Привет 👋🏼</p>
-          <p>Чтобы посмотреть расписание введи </p>
-          <span className={styles.text}>группу</span>
-        </div>
-        <Input
-          animation={headerAnimation}
-          handleGroupChange={handleGroupChange}
-        />
-        <Menu isOpen={isOpen} />
-    </div> 
+    <div className={styles.headerWrapper}>
+      <div className={styles.header} id="header">
+          <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+          <div className={styles.title} id="title">
+            <p>Привет 👋🏼</p>
+            <p>Чтобы посмотреть расписание введи </p>
+            <span className={styles.text}>группу</span>
+          </div>
+          <Input
+            animation={headerAnimation}
+            handleGroupChange={handleGroupChange}
+          />
+          <Menu isOpen={isOpen} />
+      </div> 
+    </div>
   );
 };
 
