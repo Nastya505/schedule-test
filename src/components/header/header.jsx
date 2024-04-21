@@ -30,7 +30,7 @@ const Header = ({ handleGroupChange }) => {
     ).fromTo(
       "#burger-menu",
       { display: "none", opacity: 0, duration: 0 },
-      { display: "block", opacity: 1, duration: 0.5 }
+      { display: "flex", opacity: 1, duration: 0.5 }
     );
     document.getElementById("input").blur();
   }

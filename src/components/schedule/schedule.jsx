@@ -48,7 +48,7 @@ function Schedule({ group }) {
             {prevWeek && (
               <div className={styles.buttonWrapperPrev}>
                 <button onClick={() => handleClick(prevWeek)} className={styles.button}>
-                  <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={15} />
+                  <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={14} />
                 </button>
                 <hr className={styles.border} />
               </div>
@@ -58,7 +58,7 @@ function Schedule({ group }) {
               <div className={styles.buttonWrapperNext}>
                 <hr className={styles.border} />
                 <button onClick={() => handleClick(nextWeek)} className={styles.button}>
-                  <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={15} />
+                  <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={14} />
                 </button>
               </div>
             )}
@@ -68,7 +68,7 @@ function Schedule({ group }) {
             <span className={styles.text}>Следующая неделя</span>
             <div className={styles.buttonWrapperPrev}>
               <button onClick={() => handleClick(currentWeek)} className={styles.button}>
-                <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={15} />
+                <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={14} />
               </button>
               <hr className={styles.border} />
             </div>
@@ -80,7 +80,7 @@ function Schedule({ group }) {
               <div className={styles.buttonWrapperNext}>
                 <hr className={styles.border} />
                 <button onClick={() => handleClick(currentWeek)} className={styles.button}>
-                  <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={15} />
+                  <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={14} />
                 </button>
               </div>
             </>
