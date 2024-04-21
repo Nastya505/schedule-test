@@ -69,7 +69,17 @@
     justify-content: center;
 }
 
-
+.iconLeft{
+width: 16px;
+height: 14px;
+margin-right: 2px;
+}
+.iconRight{
+    width: 16px;
+    height: 14px;
+    margin-left: 2px;
+    transform: rotate(180deg);
+}
 .border{
     width: 100%;
     border: none;
