@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./class.module.css";
+import Tooltip from "../tooltip/tooltip";
 
 import { MdOutlineSportsVolleyball } from "react-icons/md";
 import { FaWifi } from "react-icons/fa";
@@ -56,12 +57,17 @@ const Class = ({ time, course, rooms, date }) => {
         {rooms.map((room, index) => (
           <div key={index} className={styles.room}>
             {room.place === "distance" ? (
+            <Tooltip title="дистант" position="left">
               <FaWifi size={24} style={{ color: color }} />
+            </Tooltip>
             ) : null}
             {room.place === "sport-hall" ? (
+            <Tooltip title="спортивный зал" position="left">
               <MdOutlineSportsVolleyball size={24} style={{ color: color }} />
+            </Tooltip>
             ) : null}
             {room.place === "gym" ? (
+            <Tooltip title="тренажерный зал" position="left">
               <svg
                 width="24"
                 height="25"
@@ -96,8 +102,10 @@ const Class = ({ time, course, rooms, date }) => {
                   </clipPath>
                 </defs>
               </svg>
+              </Tooltip>
             ) : null}
             {room.place === "conf-hall" ? (
+            <Tooltip title="конференц зал" position="left">
               <svg
                 width="24"
                 height="25"
@@ -122,27 +130,32 @@ const Class = ({ time, course, rooms, date }) => {
                   </clipPath>
                 </defs>
               </svg>
+              </Tooltip>
             ) : null}
             {room.place === "workshop" ? (
-              <MdOutlineFactory size={24} style={{ color: color }} />
+              <Tooltip title="цех" position="left">
+                <MdOutlineFactory size={24} style={{ color: color }} />
+              </Tooltip>
             ) : null}
             {room.place === "dormitory" ? (
+            <Tooltip title="общежитие" position="left">
               <svg
                 width="24"
                 height="25"
                 viewBox="0 0 24 25"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-              >
+                >
                 <path
                   d="M21 10.5H19V4.5H20V2.5H4V4.5H5V10.5H3C2.73478 10.5 2.48043 10.6054 2.29289 10.7929C2.10536 10.9804 2 11.2348 2 11.5V20.5H22V11.5C22 11.2348 21.8946 10.9804 21.7071 10.7929C21.5196 10.6054 21.2652 10.5 21 10.5ZM14 18.5V14.5H10V18.5H7V4.5H17V18.5H14Z"
                   fill={color}
-                />
+                  />
                 <path
                   d="M9 6.5H11V8.5H9V6.5ZM13 6.5H15V8.5H13V6.5ZM9 10.5H11V12.5H9V10.5ZM13 10.5H15V12.5H13V10.5Z"
                   fill={color}
-                />
+                  />
               </svg>
+              </Tooltip>
             ) : null}
           </div>
         ))}
