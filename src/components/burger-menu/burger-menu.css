@@ -30,7 +30,6 @@
   width: 21px;
   height: 3px;
   background-color: var(--text-color-d);
-  transform-origin: 50% 50%;
   transition: all 0.3s ease;
 }
 

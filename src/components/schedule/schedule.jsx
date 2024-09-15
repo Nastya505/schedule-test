@@ -3,10 +3,6 @@ import styles from "./schedule.module.css";
 import dataJson from "../../utils/data.json";
 import Week from "../week/week";
 
-import { MdArrowBackIosNew } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
-
-
 // компонент расписания принимающий пропсом группу
 function Schedule({ group }) {
   const [data, setData] = useState([]);
@@ -18,7 +14,8 @@ function Schedule({ group }) {
   }, []);
 
   // находим переданую группу в данных
-  const currentGroup = data.groups && data.groups.find((item) => item.group === group);
+  const currentGroup =
+    data.groups && data.groups.find((item) => item.group === group);
 
   // текущая неделя
   const currentWeek = currentGroup && currentGroup.currentWeek;
@@ -27,12 +24,10 @@ function Schedule({ group }) {
   // следующая неделя
   const nextWeek = currentGroup && currentGroup.nextWeek;
 
-
-// обработчик клика
+  // обработчик клика
   const handleClick = (week) => {
     setWeek(week);
   };
-
 
   useEffect(() => {
     if (currentGroup) {
@@ -47,12 +42,23 @@ function Schedule({ group }) {
           <>
             {prevWeek && (
               <div className={styles.buttonWrapperPrev}>
-                <button onClick={() => handleClick(prevWeek)} className={styles.button}>
-                <svg className={styles.iconLeft} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
-                </svg>
-
-                  {/* <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={14} /> */}
+                <button
+                  onClick={() => handleClick(prevWeek)}
+                  className={styles.button}
+                >
+                  <svg
+                    className={styles.iconLeft}
+                    width={16}
+                    height={14}
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z"
+                      fill="#5F666B"
+                    />
+                  </svg>
                 </button>
                 <hr className={styles.border} />
               </div>
@@ -61,11 +67,23 @@ function Schedule({ group }) {
             {nextWeek && (
               <div className={styles.buttonWrapperNext}>
                 <hr className={styles.border} />
-                <button onClick={() => handleClick(nextWeek)} className={styles.button}>
-                <svg className={styles.iconRight} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
-                </svg>
-                  {/* <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={14} /> */}
+                <button
+                  onClick={() => handleClick(nextWeek)}
+                  className={styles.button}
+                >
+                  <svg
+                    className={styles.iconRight}
+                    width={16}
+                    height={14}
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z"
+                      fill="#5F666B"
+                    />
+                  </svg>
                 </button>
               </div>
             )}
@@ -74,11 +92,23 @@ function Schedule({ group }) {
           <>
             <span className={styles.text}>Следующая неделя</span>
             <div className={styles.buttonWrapperPrev}>
-              <button onClick={() => handleClick(currentWeek)} className={styles.button}>
-                <svg className={styles.iconLeft} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
+              <button
+                onClick={() => handleClick(currentWeek)}
+                className={styles.button}
+              >
+                <svg
+                  className={styles.iconLeft}
+                  width={16}
+                  height={14}
+                  viewBox="0 0 8 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z"
+                    fill="#5F666B"
+                  />
                 </svg>
-                {/* <MdArrowBackIosNew className={styles.iconLeft} color="#5F666B" size={14} /> */}
               </button>
               <hr className={styles.border} />
             </div>
@@ -89,11 +119,23 @@ function Schedule({ group }) {
               <span className={styles.text}>Прошлая неделя</span>
               <div className={styles.buttonWrapperNext}>
                 <hr className={styles.border} />
-                <button onClick={() => handleClick(currentWeek)} className={styles.button}>
-                  <svg className={styles.iconRight} width={16} height={14} viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z" fill="#5F666B"/>
+                <button
+                  onClick={() => handleClick(currentWeek)}
+                  className={styles.button}
+                >
+                  <svg
+                    className={styles.iconRight}
+                    width={16}
+                    height={14}
+                    viewBox="0 0 8 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.83521 6.00001L7.33521 10.5L6.36361 11.4546L0.909069 6.00001L6.36362 0.545468L7.33521 1.50001L2.83521 6.00001Z"
+                      fill="#5F666B"
+                    />
                   </svg>
-                  {/* <MdArrowForwardIos className={styles.iconRight} color="#5F666B" size={14} /> */}
                 </button>
               </div>
             </>

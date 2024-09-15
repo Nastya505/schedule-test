@@ -1,13 +1,13 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 5px;
-    opacity: 0;
-    transition: all 0.5s;
-    margin-top: 5px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  opacity: 0;
+  transition: all 0.5s;
+  margin-top: 5px;
 }
 
 .text {
@@ -23,82 +23,82 @@
   justify-content: center;
   align-items: center;
   background: var(--bg-color);
-
 }
 
-.buttonsWrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 15px ;
-    position: relative;
+.buttonsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  position: relative;
 }
 
-.buttonWrapperPrev{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    top: 13px;
-    left: 15px;
-    position: absolute;
+.buttonWrapperPrev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  top: 13px;
+  left: 15px;
+  position: absolute;
 }
 
-.buttonWrapperNext{
- position: absolute;
- top: 13px;
- right: 15px;
- display: flex;
- align-items: center;
- justify-content: center;
- width: 50%;
+.buttonWrapperNext {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
-.button{
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: 1px solid var(--color-nav-border);
-    border-radius: 50%;
-    cursor: pointer;
-    flex-shrink: 0;
-    z-index: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.button {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 1px solid var(--color-nav-border);
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.iconLeft{
-width: 16px;
-height: 14px;
-margin-right: 2px;
+.iconLeft {
+  width: 16px;
+  height: 14px;
+  margin-right: 2px;
+  flex-shrink: 0;
 }
-.iconRight{
-    width: 16px;
-    height: 14px;
-    margin-left: 2px;
-    transform: rotate(180deg);
+.iconRight {
+  width: 16px;
+  height: 14px;
+  margin-left: 2px;
+  transform: rotate(180deg);
+  flex-shrink: 0;
 }
-.border{
-    width: 100%;
-    border: none;
-    border-top: 1px solid var(--color-nav-border);
-    z-index:-2;
+.border {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--color-nav-border);
+  z-index: -2;
 }
 
 .sliderWeeksWrapper {
-    width: 301%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-
+  width: 301%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .sliderWeeks {
-    display: flex;
-    width: 100%;
-    transition: all .5s;
-    box-sizing: border-box;
-    gap: 9px;
-    padding-inline: 6px;
+  display: flex;
+  width: 100%;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  gap: 9px;
+  padding-inline: 6px;
 }
