@@ -48,9 +48,8 @@ function Schedule({ group }) {
                 >
                   <svg
                     className={styles.iconLeft}
-                    width={16}
-                    height={14}
                     viewBox="0 0 8 12"
+                    preserveAspectRatio="none"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -73,10 +72,9 @@ function Schedule({ group }) {
                 >
                   <svg
                     className={styles.iconRight}
-                    width={16}
-                    height={14}
                     viewBox="0 0 8 12"
                     fill="none"
+                    preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -98,10 +96,9 @@ function Schedule({ group }) {
               >
                 <svg
                   className={styles.iconLeft}
-                  width={16}
-                  height={14}
                   viewBox="0 0 8 12"
                   fill="none"
+                  preserveAspectRatio="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -125,10 +122,9 @@ function Schedule({ group }) {
                 >
                   <svg
                     className={styles.iconRight}
-                    width={16}
-                    height={14}
                     viewBox="0 0 8 12"
                     fill="none"
+                    preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path

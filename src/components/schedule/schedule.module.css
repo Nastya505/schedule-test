@@ -69,13 +69,13 @@
 }
 
 .iconLeft {
-  width: 16px;
+  width: 12px;
   height: 14px;
   margin-right: 2px;
   flex-shrink: 0;
 }
 .iconRight {
-  width: 16px;
+  width: 12px;
   height: 14px;
   margin-left: 2px;
   transform: rotate(180deg);
