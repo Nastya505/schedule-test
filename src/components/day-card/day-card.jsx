@@ -24,36 +24,26 @@ const monthNames = {
 
 // время начало занятий в понедельник
 const allStartTimeMonday = [
-  "08:00",
-  "08:50",
-  "10:20",
-  "11:50",
-  "13:10",
-  "13:50",
-  "14:40",
-  "16:10",
-  "17:40",
+  "08:20",
+  "08:30",
+  "10:10",
+  "11:05",
+  "12:45",
+  "14:15",
+  "14:55",
+  "16:35",
+  "17:30",
+  "19:10",
 ];
-// время начало занятий со вторника по пятницу
+// время начало занятий со вторника по cубботу
 const allStartTimeEveryDay = [
-  "08:00",
-  "09:45",
-  "11:30",
-  "13:05",
-  "13:45",
-  "15:30",
-  "17:15",
-];
-
-// время начало занятий в субботу
-const allStartTimeSaturday = [
-  "08:00",
-  "09:40",
-  "11:20",
-  "12:50",
-  "13:20",
-  "15:00",
-  "16:40",
+  "08:30",
+  "10:15",
+  "12:00",
+  "13:35",
+  "14:15",
+  "16:00",
+  "17:45",
 ];
 
 // компонент карточки в котором показывается расписание на день
@@ -108,18 +98,25 @@ const DayCard = ({ day }) => {
   const getStartTime = (day) => {
     if (day.day === "Понедельник") {
       return allStartTimeMonday;
-    } else if (day.day === "Суббота") {
-      return allStartTimeSaturday;
     } else {
       return allStartTimeEveryDay;
     }
   };
+  let hasLunchBeenAdded = false;
 
   // заполняем расписание на день
   let schedule = getStartTime(day)
     .map((time) => {
+      if (day.day === "Понедельник" && time === "08:20") {
+        return {
+          time: time,
+          course: "Общеколледжная линейка",
+          rooms: [],
+        };
+      }
       let classInfo = day.classes.find((item) => item.time.start === time);
-      if (time === "13:05" || time === "12:50" || time === "13:10") {
+      if (time === "13:35" || (time === "14:15" && !hasLunchBeenAdded)) {
+        hasLunchBeenAdded = true;
         return {
           time: time,
           course: "обед",
@@ -143,10 +140,10 @@ const DayCard = ({ day }) => {
     })
     .filter((item) => {
       if (day.day === "Понедельник") {
-        if (item.time === "08:00" && item.course === "") {
+        if (item.time === "10:00" && item.course === "") {
           return false;
         }
-        if (item.time === "13:50" && item.course === "") {
+        if (item.time === "16:35" && item.course === "") {
           return false;
         }
         return true;
@@ -159,7 +156,7 @@ const DayCard = ({ day }) => {
       style={{
         height: clicked
           ? day.day === "Понедельник"
-            ? "610px"
+            ? "660px"
             : "555px"
           : "74px",
         borderRadius: clicked ? "40px" : "25px",

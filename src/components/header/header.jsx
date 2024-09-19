@@ -50,8 +50,8 @@ const Header = ({ handleGroupChange }) => {
         padding: "15px",
         alignItems: "end",
         justifyContent: "flex-end",
-        duration: .1,
-        boxShadow:"0px 4px 4px 0px #00000040"
+        duration: 0.1,
+        boxShadow: "0px 4px 4px 0px #00000040",
       });
 
       tl.fromTo(
@@ -80,18 +80,18 @@ const Header = ({ handleGroupChange }) => {
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.header} id="header">
-          <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-          <div className={styles.title} id="title">
-            <p>Привет 👋🏼</p>
-            <p>Чтобы посмотреть расписание введи </p>
-            <span className={styles.text}>группу</span>
-          </div>
-          <Input
-            animation={headerAnimation}
-            handleGroupChange={handleGroupChange}
-          />
-          <Menu isOpen={isOpen} />
-      </div> 
+        <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <div className={styles.title} id="title">
+          <p>Привет 👋🏼</p>
+          <p>Чтобы посмотреть расписание введи </p>
+          <span className={styles.text}>группу</span>
+        </div>
+        <Input
+          animation={headerAnimation}
+          handleGroupChange={handleGroupChange}
+        />
+        <Menu isOpen={isOpen} />
+      </div>
     </div>
   );
 };

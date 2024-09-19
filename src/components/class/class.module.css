@@ -1,65 +1,64 @@
-.class{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    border-bottom: 1px solid var(--border-class);
-    padding:  9px 0;
-    gap: 10px;
+.class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid var(--border-class);
+  padding: 9px 0;
+  gap: 10px;
 }
- .class:nth-child(1) {
-    border-top: .5px solid var(--border-class);
-}
-
-.info{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
+.class:nth-child(1) {
+  border-top: 0.5px solid var(--border-class);
 }
 
-.course{
-    color: inherit;
-    padding: 7px 10px;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18.75px;
-    text-align: left;
-}
-.time{
-    color: inherit;
-    padding: 7px 0px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18.75px;
-    text-align: left;
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
 }
 
-.rooms{
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.course {
+  color: inherit;
+  padding: 7px 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  text-align: left;
 }
-.hour{
-    background: var(--bg-class-hour);
-    color: var(--color-class-hour);
-    border-radius: 10px;
+.time {
+  color: inherit;
+  padding: 7px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  text-align: left;
 }
-.extra{
-width: 15px;
-height: 16px;
-padding: 2px 4px;
-font-size: 10px;
-line-height: 12.1px;
 
-border-radius: 5px;
-border: 1px solid var(--border-class);
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-margin-left: 3px;
+.rooms {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hour {
+  background: var(--bg-class-hour);
+  color: var(--color-class-hour);
+  border-radius: 10px;
+}
+.extra {
+  width: 15px;
+  height: 16px;
+  padding: 2px 4px;
+  font-size: 10px;
+  line-height: 12.1px;
 
+  border-radius: 5px;
+  border: 1px solid var(--border-class);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 3px;
 }

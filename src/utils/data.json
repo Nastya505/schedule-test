@@ -3,20 +3,20 @@
     {
       "group": "ИСИП-9-21",
       "prevWeek": {
-        "from": "19.08.2024",
-        "to": "24.08.2024",
+        "from": "16.09.2024",
+        "to": "21.09.2024",
         "days": [
           {
             "day": "Понедельник",
-            "date": "19 августа",
+            "date": "16 сентября",
             "classes": [
               {
-                "lesson": 3,
+                "lesson": 2,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "11:05",
+                  "end": "12:35"
                 },
-                "course": "Граф. дизайн",
+                "course": "пр и разраб инт пол",
                 "rooms": [
                   {
                     "place": "distance",
@@ -25,58 +25,62 @@
                   }
                 ]
               },
-
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:45",
+                  "end": "14:15"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
               {
                 "lesson": 4,
                 "time": {
-                  "start": "13:50",
-                  "end": "14:35"
+                  "start": "14:55",
+                  "end": "16:25"
                 },
-                "course": "Классный час",
+                "course": "физическая культ",
                 "rooms": [
                   {
-                    "place": "college",
-                    "room": "222",
-                    "extra": "A"
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
                   }
                 ]
               },
               {
                 "lesson": 5,
                 "time": {
-                  "start": "14:40",
-                  "end": "16:00"
+                  "start": "16:35",
+                  "end": "17:20"
                 },
-                "course": "Граф. дизайн",
+                "course": "Классный час",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
+                    "room": "211",
                     "extra": null
                   }
                 ]
               },
               {
-                "lesson": 6,
+                "lesson": 5,
                 "time": {
-                  "start": "16:10",
-                  "end": "17:30"
+                  "start": "17:30",
+                  "end": "19:00"
                 },
-                "course": "Граф. дизайн",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
+                    "room": "211",
                     "extra": null
                   }
                 ]
@@ -85,359 +89,15 @@
           },
           {
             "day": "Вторник",
-            "date": "20 августа",
+            "date": "17 сентября",
             "classes": [
               {
                 "lesson": 1,
                 "time": {
-                  "start": "08:00",
-                  "end": "09:35"
+                  "start": "08:30",
+                  "end": "10:05"
                 },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Среда",
-            "date": "21 августа",
-            "classes": [
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 4,
-                "time": {
-                  "start": "13:45",
-                  "end": "15:20"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Четверг",
-            "date": "22 августа",
-            "classes": [
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "Тестирование ИС",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": "A"
-                  }
-                ]
-              },
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "Тестирование ИС",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": "A"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Пятница",
-            "date": "23 августа",
-            "classes": [
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Суббота",
-            "date": "24 августа",
-            "classes": [
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:20",
-                  "end": "12:50"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "currentWeek": {
-        "from": "26.08.2024",
-        "to": "31.08.2024",
-        "days": [
-          {
-            "day": "Понедельник",
-            "date": "26 августа",
-            "classes": [
-              {
-                "lesson": 1,
-                "time": {
-                  "start": "08:00",
-                  "end": "08:45"
-                },
-                "course": "Классный час",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "08:50",
-                  "end": "10:10"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": "A"
-                  }
-                ]
-              },
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "10:20",
-                  "end": "11:40"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": "A"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Вторник",
-            "date": "27 августа",
-            "classes": [
-              {
-                "lesson": 1,
-                "time": {
-                  "start": "08:00",
-                  "end": "09:35"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": "A"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Среда",
-            "date": "28 августа",
-            "classes": [
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "Иностр яз",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 4,
-                "time": {
-                  "start": "13:45",
-                  "end": "15:20"
-                },
-                "course": "Иностр яз",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 5,
-                "time": {
-                  "start": "15:30",
-                  "end": "17:05"
-                },
-                "course": "Иностр яз",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  },
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Четверг",
-            "date": "29 августа",
-            "classes": [
-              {
-                "lesson": 1,
-                "time": {
-                  "start": "08:00",
-                  "end": "09:35"
-                },
-                "course": "Физкультура",
+                "course": "физическая культ",
                 "rooms": [
                   {
                     "place": "gym",
@@ -449,14 +109,14 @@
               {
                 "lesson": 2,
                 "time": {
-                  "start": "09:45",
-                  "end": "11:20"
+                  "start": "10:15",
+                  "end": "11:50"
                 },
-                "course": "фрезка",
+                "course": "осн философии",
                 "rooms": [
                   {
-                    "place": "workshop",
-                    "room": null,
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -464,8 +124,8 @@
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
                 "course": "Граф. дизайн",
                 "rooms": [
@@ -484,19 +144,19 @@
             ]
           },
           {
-            "day": "Пятница",
-            "date": "30 августа",
+            "day": "Среда",
+            "date": "18 сентября",
             "classes": [
               {
                 "lesson": 1,
                 "time": {
-                  "start": "08:00",
-                  "end": "09:35"
+                  "start": "08:30",
+                  "end": "10:05"
                 },
-                "course": "Граф. дизайн",
+                "course": "физическая культ",
                 "rooms": [
                   {
-                    "place": "distance",
+                    "place": "gym",
                     "room": null,
                     "extra": null
                   }
@@ -505,14 +165,14 @@
               {
                 "lesson": 2,
                 "time": {
-                  "start": "09:45",
-                  "end": "11:20"
+                  "start": "10:15",
+                  "end": "11:50"
                 },
-                "course": "Граф. дизайн",
+                "course": "Об веб прил",
                 "rooms": [
                   {
-                    "place": "distance",
-                    "room": null,
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -520,14 +180,111 @@
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
                 "course": "Граф. дизайн",
                 "rooms": [
                   {
-                    "place": "distance",
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Четверг",
+            "date": "19 сентября",
+            "classes": [
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "sport-hall",
                     "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 5,
+                "time": {
+                  "start": "16:00",
+                  "end": "17:35"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Пятница",
+            "date": "20 сентября",
+            "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
                     "extra": null
                   }
                 ]
@@ -536,15 +293,138 @@
           },
           {
             "day": "Суббота",
-            "date": "31 августа",
+            "date": "21 сентября",
             "classes": [
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:20",
-                  "end": "12:50"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "Тестирование ИС",
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "currentWeek": {
+        "from": "23.09.2024",
+        "to": "28.09.2024",
+        "days": [
+          {
+            "day": "Понедельник",
+            "date": "23 сентября",
+            "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:00"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:10",
+                  "end": "10:55"
+                },
+                "course": "Классный час",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": "A"
+                  }
+                ]
+              },
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "11:05",
+                  "end": "12:35"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": "A"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Вторник",
+            "date": "24 сентября",
+            "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "Граф. дизайн",
                 "rooms": [
                   {
                     "place": "college",
@@ -557,14 +437,122 @@
                     "extra": null
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "day": "Среда",
+            "date": "25 сентября",
+            "classes": [
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
               },
               {
                 "lesson": 4,
                 "time": {
-                  "start": "13:20",
-                  "end": "14:50"
+                  "start": "14:15",
+                  "end": "15:50"
                 },
-                "course": "Тестирование ИС",
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Четверг",
+            "date": "26 сентября",
+            "classes": [
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Пятница",
+            "date": "20 сентября",
+            "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "Граф. дизайн",
                 "rooms": [
                   {
                     "place": "college",
@@ -574,6 +562,42 @@
                   {
                     "place": "college",
                     "room": "208",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Суббота",
+            "date": "21 сентября",
+            "classes": [
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -583,27 +607,27 @@
         ]
       },
       "nextWeek": {
-        "from": "02.09.2024",
-        "to": "07.09.2024",
+        "from": "30.09.2024",
+        "to": "05.10.2024",
         "days": [
           {
             "day": "Понедельник",
-            "date": "2 сентября",
+            "date": "30 сентября",
             "classes": []
           },
           {
             "day": "Вторник",
-            "date": "3 сентября",
+            "date": "1 октября",
             "classes": []
           },
           {
             "day": "Среда",
-            "date": "4 сентября",
+            "date": "2 октября",
             "classes": []
           },
           {
             "day": "Четверг",
-            "date": "5 сентября",
+            "date": "3 октября",
             "classes": [
               {
                 "lesson": 2,
@@ -654,45 +678,15 @@
           },
           {
             "day": "Пятница",
-            "date": "6 сентября",
+            "date": "4 октября",
             "classes": [
-              {
-                "lesson": 1,
-                "time": {
-                  "start": "08:00",
-                  "end": "09:35"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "Граф. дизайн",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  }
-                ]
-              },
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "Граф. дизайн",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -705,19 +699,19 @@
           },
           {
             "day": "Суббота",
-            "date": "7 сентября",
+            "date": "5 октября",
             "classes": [
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:20",
-                  "end": "12:50"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "Граф. дизайн",
+                "course": "осн философии",
                 "rooms": [
                   {
-                    "place": "distance",
-                    "room": null,
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -725,14 +719,14 @@
               {
                 "lesson": 4,
                 "time": {
-                  "start": "13:20",
-                  "end": "14:50"
+                  "start": "14:15",
+                  "end": "15:50"
                 },
-                "course": "Граф. дизайн",
+                "course": "осн философии",
                 "rooms": [
                   {
-                    "place": "distance",
-                    "room": null,
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -743,42 +737,56 @@
       }
     },
     {
-      "group": "Гд-9-21",
+      "group": "ГД-9-21",
       "prevWeek": {
-        "from": "15.04.2024",
-        "to": "20.04.2024",
+        "from": "16.09.2024",
+        "to": "21.09.2024",
         "days": [
           {
             "day": "Понедельник",
-            "date": "15 апреля",
+            "date": "16 сентября",
             "classes": [
               {
-                "lesson": 3,
+                "lesson": 2,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "11:05",
+                  "end": "12:35"
                 },
-                "course": "фирм стиль",
+                "course": "пр и разраб инт пол",
                 "rooms": [
                   {
-                    "place": "college",
-                    "room": "208",
+                    "place": "distance",
+                    "room": null,
                     "extra": null
                   }
                 ]
               },
-
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:45",
+                  "end": "14:15"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
               {
                 "lesson": 4,
                 "time": {
-                  "start": "13:50",
-                  "end": "14:35"
+                  "start": "16:35",
+                  "end": "17:20"
                 },
                 "course": "Классный час",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "207",
+                    "room": "211",
                     "extra": null
                   }
                 ]
@@ -786,14 +794,14 @@
               {
                 "lesson": 5,
                 "time": {
-                  "start": "14:40",
-                  "end": "16:00"
+                  "start": "17:30",
+                  "end": "19:00"
                 },
-                "course": "фирм стиль",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "207",
+                    "room": "211",
                     "extra": null
                   }
                 ]
@@ -802,19 +810,19 @@
           },
           {
             "day": "Вторник",
-            "date": "16 апреля",
+            "date": "17 сентября",
             "classes": [
               {
                 "lesson": 1,
                 "time": {
-                  "start": "08:00",
-                  "end": "09:35"
+                  "start": "08:30",
+                  "end": "10:05"
                 },
-                "course": "диз упаковки",
+                "course": "физическая культ",
                 "rooms": [
                   {
-                    "place": "dormitory",
-                    "room": "102",
+                    "place": "gym",
+                    "room": null,
                     "extra": null
                   }
                 ]
@@ -822,82 +830,10 @@
               {
                 "lesson": 2,
                 "time": {
-                  "start": "09:45",
-                  "end": "11:20"
+                  "start": "10:15",
+                  "end": "11:50"
                 },
-                "course": "диз упаковки",
-                "rooms": [
-                  {
-                    "place": "dormitory",
-                    "room": "102",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "Психология",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "215",
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Среда",
-            "date": "17 апреля",
-            "classes": [
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "инф диз",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 4,
-                "time": {
-                  "start": "13:45",
-                  "end": "15:20"
-                },
-                "course": "инф диз",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Четверг",
-            "date": "18 апреля",
-            "classes": [
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "диз упаковки",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -909,10 +845,107 @@
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Среда",
+            "date": "18 сентября",
+            "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "Об веб прил",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "12:00",
+                  "end": "13:35"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Четверг",
+            "date": "19 сентября",
+            "classes": [
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "sport-hall",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 5,
+                "time": {
+                  "start": "16:00",
+                  "end": "17:35"
+                },
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -925,19 +958,54 @@
           },
           {
             "day": "Пятница",
-            "date": "19 апреля",
+            "date": "20 сентября",
             "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "Граф. дизайн",
                 "rooms": [
                   {
-                    "place": "dormitory",
-                    "room": "102",
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
                     "extra": null
                   }
                 ]
@@ -946,19 +1014,34 @@
           },
           {
             "day": "Суббота",
-            "date": "20 апреля",
+            "date": "21 сентября",
             "classes": [
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:20",
-                  "end": "12:50"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "208",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -968,76 +1051,24 @@
         ]
       },
       "currentWeek": {
-        "from": "22.04.2024",
-        "to": "27.04.2024",
+        "from": "23.09.2024",
+        "to": "28.09.2024",
         "days": [
           {
             "day": "Понедельник",
-            "date": "22 апреля",
-            "classes": [
-              {
-                "lesson": 3,
-                "time": {
-                  "start": "11:30",
-                  "end": "13:05"
-                },
-                "course": "фирм стиль",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "208",
-                    "extra": null
-                  }
-                ]
-              },
-
-              {
-                "lesson": 4,
-                "time": {
-                  "start": "13:50",
-                  "end": "14:35"
-                },
-                "course": "Классный час",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 5,
-                "time": {
-                  "start": "14:40",
-                  "end": "16:00"
-                },
-                "course": "фирм стиль",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Вторник",
-            "date": "23 апреля",
+            "date": "23 сентября",
             "classes": [
               {
                 "lesson": 1,
                 "time": {
-                  "start": "08:00",
-                  "end": "09:35"
+                  "start": "08:30",
+                  "end": "10:00"
                 },
-                "course": "диз упаковки",
+                "course": "Граф. дизайн",
                 "rooms": [
                   {
-                    "place": "dormitory",
-                    "room": "102",
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -1045,14 +1076,65 @@
               {
                 "lesson": 2,
                 "time": {
-                  "start": "09:45",
-                  "end": "11:20"
+                  "start": "10:10",
+                  "end": "10:55"
                 },
-                "course": "диз упаковки",
+                "course": "Классный час",
                 "rooms": [
                   {
-                    "place": "dormitory",
-                    "room": "102",
+                    "place": "college",
+                    "room": "207",
+                    "extra": "A"
+                  }
+                ]
+              },
+              {
+                "lesson": 3,
+                "time": {
+                  "start": "11:05",
+                  "end": "12:35"
+                },
+                "course": "Граф. дизайн",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": "A"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Вторник",
+            "date": "24 сентября",
+            "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -1060,14 +1142,19 @@
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "Психология",
+                "course": "Граф. дизайн",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "215",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
                     "extra": null
                   }
                 ]
@@ -1076,51 +1163,15 @@
           },
           {
             "day": "Среда",
-            "date": "24 апреля",
+            "date": "25 сентября",
             "classes": [
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "инф диз",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 4,
-                "time": {
-                  "start": "13:45",
-                  "end": "15:20"
-                },
-                "course": "инф диз",
-                "rooms": [
-                  {
-                    "place": "distance",
-                    "room": null,
-                    "extra": null
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "day": "Четверг",
-            "date": "25 апреля",
-            "classes": [
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "диз упаковки",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -1130,12 +1181,48 @@
                 ]
               },
               {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "day": "Четверг",
+            "date": "26 сентября",
+            "classes": [
+              {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -1148,19 +1235,54 @@
           },
           {
             "day": "Пятница",
-            "date": "26 апреля",
+            "date": "20 сентября",
             "classes": [
+              {
+                "lesson": 1,
+                "time": {
+                  "start": "08:30",
+                  "end": "10:05"
+                },
+                "course": "физическая культ",
+                "rooms": [
+                  {
+                    "place": "gym",
+                    "room": null,
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 2,
+                "time": {
+                  "start": "10:15",
+                  "end": "11:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "Граф. дизайн",
                 "rooms": [
                   {
-                    "place": "dormitory",
-                    "room": "102",
+                    "place": "college",
+                    "room": "207",
+                    "extra": null
+                  },
+                  {
+                    "place": "college",
+                    "room": "208",
                     "extra": null
                   }
                 ]
@@ -1169,19 +1291,34 @@
           },
           {
             "day": "Суббота",
-            "date": "27 апреля",
+            "date": "21 сентября",
             "classes": [
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:20",
-                  "end": "12:50"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
-                    "room": "208",
+                    "room": "207",
+                    "extra": null
+                  }
+                ]
+              },
+              {
+                "lesson": 4,
+                "time": {
+                  "start": "14:15",
+                  "end": "15:50"
+                },
+                "course": "осн философии",
+                "rooms": [
+                  {
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
@@ -1191,27 +1328,27 @@
         ]
       },
       "nextWeek": {
-        "from": "29.04.2024",
-        "to": "04.04.2024",
+        "from": "30.09.2024",
+        "to": "05.10.2024",
         "days": [
           {
             "day": "Понедельник",
-            "date": "29 апреля",
+            "date": "30 сентября",
             "classes": []
           },
           {
             "day": "Вторник",
-            "date": "30 апреля",
+            "date": "1 октября",
             "classes": []
           },
           {
             "day": "Среда",
-            "date": "1 мая",
+            "date": "2 октября",
             "classes": []
           },
           {
             "day": "Четверг",
-            "date": "2 мая",
+            "date": "3 октября",
             "classes": [
               {
                 "lesson": 2,
@@ -1219,7 +1356,7 @@
                   "start": "09:45",
                   "end": "11:20"
                 },
-                "course": "менеджмент",
+                "course": "Тестирование ИС",
                 "rooms": [
                   {
                     "place": "college",
@@ -1262,45 +1399,15 @@
           },
           {
             "day": "Пятница",
-            "date": "3 мая",
+            "date": "4 октября",
             "classes": [
-              {
-                "lesson": 1,
-                "time": {
-                  "start": "08:00",
-                  "end": "09:35"
-                },
-                "course": "диз упаковки",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  }
-                ]
-              },
-              {
-                "lesson": 2,
-                "time": {
-                  "start": "09:45",
-                  "end": "11:20"
-                },
-                "course": "инф диз",
-                "rooms": [
-                  {
-                    "place": "college",
-                    "room": "207",
-                    "extra": null
-                  }
-                ]
-              },
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:30",
-                  "end": "13:05"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "инф диз",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -1313,15 +1420,15 @@
           },
           {
             "day": "Суббота",
-            "date": "4 мая",
+            "date": "5 октября",
             "classes": [
               {
                 "lesson": 3,
                 "time": {
-                  "start": "11:20",
-                  "end": "12:50"
+                  "start": "12:00",
+                  "end": "13:35"
                 },
-                "course": "диз упаковки",
+                "course": "осн философии",
                 "rooms": [
                   {
                     "place": "college",
@@ -1333,14 +1440,14 @@
               {
                 "lesson": 4,
                 "time": {
-                  "start": "13:20",
-                  "end": "14:50"
+                  "start": "14:15",
+                  "end": "15:50"
                 },
-                "course": "менеджмент",
+                "course": "осн философии",
                 "rooms": [
                   {
-                    "place": "distance",
-                    "room": null,
+                    "place": "college",
+                    "room": "207",
                     "extra": null
                   }
                 ]
