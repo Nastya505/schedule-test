@@ -47,7 +47,7 @@ const BurgerMenu = ({ isOpen, setIsOpen }) => {
           { scaleX: 0, duration: 0.05, display: "block" },
           { scaleX: "100%", duration: 0.05, display: "block" }
         );
-    } else if (isOpen === false) {
+    } else if (isOpen === false && tlRef.current) {
       tlRef.current.reverse();
     } else {
       gsap

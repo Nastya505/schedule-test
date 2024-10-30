@@ -3,14 +3,20 @@ import styles from "./input.module.css";
 import dataJson from "../../utils/data.json";
 
 // данный компонент отвечает за ввод группы в поисковой строке и выбор группы из списка
-const Input = ({ animation, handleGroupChange }) => {
+const Input = ({ animation, handleGroupChange, initialValue = "" }) => {
   const [options, setOptions] = useState(null);
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     setOptions(dataJson.groups);
   }, []);
+  useEffect(() => {
+    if (initialValue) {
+      setValue(initialValue); // Устанавливаем начальное значение из пропса
+      animation(true); // Пропускаем анимацию, если значение загружено
+    }
+  }, [initialValue, animation]);
 
-  const [value, setValue] = useState("");
   // Добавляем состояние для хранения предыдущего значения
   const [previousValue, setPreviousValue] = useState("");
   const [active, setActive] = useState(false);

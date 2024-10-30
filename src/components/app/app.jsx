@@ -19,7 +19,10 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <Header handleGroupChange={setSelectedGroup} />
+      <Header
+        handleGroupChange={setSelectedGroup}
+        initialGroup={selectedGroup}
+      />
       <Schedule group={selectedGroup} />
     </div>
   );

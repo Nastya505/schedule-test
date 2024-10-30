@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Input from "../input/input";
 import BurgerMenu from "../burger-menu/burger-menu";
@@ -6,11 +6,44 @@ import Menu from "../menu/menu";
 
 import styles from "./header.module.css";
 
-// компонент хедера принимающий пропсом функцию  изменения группы
-const Header = ({ handleGroupChange }) => {
-  const [isOpen, setIsOpen] = React.useState();
+// компонент хедера, принимающий пропсом функцию изменения группы
+const Header = ({ handleGroupChange, initialGroup }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [skipAnimation, setSkipAnimation] = useState(false); // Состояние для пропуска анимации
 
-  // анимация для инпута
+  useEffect(() => {
+    // Проверка на наличие сохраненной группы при загрузке компонента
+    const savedGroup = localStorage.getItem("selectedGroup");
+    if (savedGroup) {
+      setSkipAnimation(true); // Если группа сохранена, пропускаем анимацию
+      setHeaderStylesAfterAnimation(); // Устанавливаем конечные стили сразу
+    }
+  }, []);
+
+  // Функция для установки конечных стилей хедера, если анимация пропускается
+  const setHeaderStylesAfterAnimation = () => {
+    gsap.set("#title", { display: "none", opacity: 0 });
+    gsap.set("#header", {
+      opacity: 1,
+      backgroundColor: "#292F34",
+      color: "var(--text-color-d)",
+      border: "1px solid #444C56",
+      height: "80px",
+      padding: "15px",
+      alignItems: "end",
+      justifyContent: "flex-end",
+      boxShadow: "0px 4px 4px 0px #00000040",
+    });
+    gsap.set("#input-wrapper", {
+      maxWidth: "162px",
+      backgroundColor: "#3C444D",
+      color: "var(--text-color-d)",
+    });
+    gsap.set("#burger-menu", { display: "flex", opacity: 1 });
+    gsap.set("#schedule", { display: "flex", opacity: 1 });
+  };
+
+  // Анимация для инпута
   function inputAnimation() {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -27,20 +60,15 @@ const Header = ({ handleGroupChange }) => {
       "#list",
       { backgroundColor: "var(--input-background)" },
       { backgroundColor: "#3C444D", duration: 0.1 }
-    ).fromTo(
-      "#burger-menu",
-      { display: "none", opacity: 0, duration: 0 },
-      { display: "flex", opacity: 1, duration: 0.5 }
     );
     document.getElementById("input").blur();
   }
 
-  // анимация для header если выбрана группа
+  // Анимация для header, если выбрана группа
   const headerAnimation = (selectedOptionExists) => {
     const tl = gsap.timeline();
-    if (selectedOptionExists) {
+    if (selectedOptionExists && !skipAnimation) {
       tl.to("#title", { display: "none", opacity: 0 });
-
       tl.to("#header", {
         opacity: 1,
         backgroundColor: "#292F34",
@@ -53,7 +81,6 @@ const Header = ({ handleGroupChange }) => {
         duration: 0.1,
         boxShadow: "0px 4px 4px 0px #00000040",
       });
-
       tl.fromTo(
         "#input-wrapper",
         { opacity: 1, y: 0 },
@@ -66,14 +93,9 @@ const Header = ({ handleGroupChange }) => {
           duration: 0.5,
         }
       );
-
       tl.add(inputAnimation);
-
-      tl.fromTo(
-        "#schedule",
-        { opacity: 0, duration: 0.05 },
-        { opacity: 1, duration: 0.2 }
-      );
+      tl.to("#schedule", { display: "flex", opacity: 1 });
+      tl.to("#burger-menu", { display: "flex", opacity: 1, duration: 1 });
     }
   };
 
@@ -81,14 +103,21 @@ const Header = ({ handleGroupChange }) => {
     <div className={styles.headerWrapper}>
       <div className={styles.header} id="header">
         <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div className={styles.title} id="title">
-          <p>Привет 👋🏼</p>
-          <p>Чтобы посмотреть расписание введи </p>
-          <span className={styles.text}>группу</span>
-        </div>
+        {/* Приветствие показывается, только если анимация не была пропущена */}
+        {!skipAnimation && (
+          <div className={styles.title} id="title">
+            <p>Привет 👋🏼</p>
+            <p>Чтобы посмотреть расписание введи </p>
+            <span className={styles.text}>группу</span>
+          </div>
+        )}
         <Input
           animation={headerAnimation}
-          handleGroupChange={handleGroupChange}
+          handleGroupChange={(group) => {
+            handleGroupChange(group);
+            headerAnimation(true);
+          }}
+          initialValue={initialGroup}
         />
         <Menu isOpen={isOpen} />
       </div>
