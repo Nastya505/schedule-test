@@ -51,7 +51,7 @@ const Class = ({ time, course, rooms, date }) => {
         <span className={styles.time}>{time}</span>
         <span
           className={
-            course === "Классный час"
+            course.startsWith("классный час")
               ? `${styles.course} ${styles.hour}`
               : course === "Общеколледжная линейка"
               ? `${styles.course} ${styles.hour}`
@@ -70,7 +70,7 @@ const Class = ({ time, course, rooms, date }) => {
                 <FaWifi size={24} style={{ color: color }} />
               </Tooltip>
             ) : null}
-            {room.place === "sport-hall" ? (
+            {room.place === "sports-hall" ? (
               <Tooltip title="спортивный зал" position="left">
                 <MdOutlineSportsVolleyball size={24} style={{ color: color }} />
               </Tooltip>
@@ -168,22 +168,34 @@ const Class = ({ time, course, rooms, date }) => {
             ) : null}
           </div>
         ))}
-
         {rooms.length === 1 ? (
-          <span>{rooms[0].room}</span>
+          /^[0-9]+$/.test(rooms[0].room) ||
+          (/[A-Za-zА-Яа-я]/.test(rooms[0].room) &&
+            /[0-9]/.test(rooms[0].room)) ? (
+            <span>{rooms[0].room}</span>
+          ) : null
         ) : rooms.length === 2 ? (
           <span>
-            {rooms[0].room} <span style={{ opacity: "0.5" }}>|</span>{" "}
-            {rooms[1].room}
+            {/^[0-9]+$/.test(rooms[0].room) ||
+            (/[A-Za-zА-Яа-я]/.test(rooms[0].room) &&
+              /[0-9]/.test(rooms[0].room))
+              ? rooms[0].room
+              : null}
+            {(/^[0-9]+$/.test(rooms[0].room) ||
+              (/[A-Za-zА-Яа-я]/.test(rooms[0].room) &&
+                /[0-9]/.test(rooms[0].room))) &&
+            (/^[0-9]+$/.test(rooms[1].room) ||
+              (/[A-Za-zА-Яа-я]/.test(rooms[1].room) &&
+                /[0-9]/.test(rooms[1].room))) ? (
+              <span style={{ opacity: "0.5" }}> | </span>
+            ) : null}
+            {/^[0-9]+$/.test(rooms[1].room) ||
+            (/[A-Za-zА-Яа-я]/.test(rooms[1].room) &&
+              /[0-9]/.test(rooms[1].room))
+              ? rooms[1].room
+              : null}
           </span>
         ) : null}
-
-        {rooms.map(
-          (room) =>
-            room.extra !== null && (
-              <span className={styles.extra}>{room.extra}</span>
-            )
-        )}
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ const Header = ({ handleGroupChange, initialGroup }) => {
       boxShadow: "0px 4px 4px 0px #00000040",
     });
     gsap.set("#input-wrapper", {
-      maxWidth: "162px",
+      maxWidth: "180px",
       backgroundColor: "#3C444D",
       color: "var(--text-color-d)",
     });
@@ -85,7 +85,7 @@ const Header = ({ handleGroupChange, initialGroup }) => {
         "#input-wrapper",
         { opacity: 1, y: 0 },
         {
-          maxWidth: "162px",
+          maxWidth: "180px",
           y: 0,
           backgroundColor: "#3C444D",
           opacity: 1,

@@ -7,21 +7,6 @@ import { MdArrowOutward } from "react-icons/md";
 import { IoMdStarOutline } from "react-icons/io";
 import Tooltip from "../tooltip/tooltip";
 
-const monthNames = {
-  января: 0,
-  февраля: 1,
-  марта: 2,
-  апреля: 3,
-  мая: 4,
-  июня: 5,
-  июля: 6,
-  августа: 7,
-  сентября: 8,
-  октября: 9,
-  ноября: 10,
-  декабря: 11,
-};
-
 // время начало занятий в понедельник
 const allStartTimeMonday = [
   "08:20",
@@ -32,8 +17,7 @@ const allStartTimeMonday = [
   "14:15",
   "14:55",
   "16:35",
-  "17:30",
-  "19:10",
+  "18:15",
 ];
 // время начало занятий со вторника по cубботу
 const allStartTimeEveryDay = [
@@ -64,31 +48,24 @@ const DayCard = ({ day }) => {
   const allClassDistance = day.classes.every((item) =>
     item.rooms.some((room) => room.place === "distance")
   );
-
   // текущая дата
   const [currentDate, setCurrentDate] = React.useState(new Date());
-  // получаем текущий год
-  const currentYear = new Date().getFullYear();
-  // Разбиваем строку на день и месяц
-  const [dayStr, monthStr] = day.date.split(" ");
-  // Получаем числовое значение месяца из словаря
-  const month = monthNames[monthStr];
-  // Создаем новую дату с текущим годом, месяцем и днем в миллисекундах
-  const date = new Date(currentYear, month, dayStr);
+
+  // получаем дату из строки "DD.MM.YYYY"
+  const [dayStr, monthStr, yearStr] = day.date.split(".");
+  const date = new Date(yearStr, monthStr - 1, dayStr);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDate(new Date());
-    }, 5 * 60 * 1000);
+    }, 5 * 60 * 1000); // обновление каждые 5 минут
 
     return () => clearInterval(interval);
   }, []);
 
   // цвет текста в зависимости от даты
   const color =
-    currentDate.getFullYear() === date.getFullYear() &&
-    currentDate.getMonth() === date.getMonth() &&
-    currentDate.getDate() === date.getDate()
+    currentDate.toDateString() === date.toDateString()
       ? "var(--text-color)"
       : currentDate > date
       ? "var(--color-no-active)"
@@ -161,7 +138,7 @@ const DayCard = ({ day }) => {
           : "74px",
         borderRadius: clicked ? "40px" : "25px",
         backgroundColor:
-          !clicked && currentDate.getDate() === date.getDate()
+          !clicked && currentDate.toDateString() === date.toDateString()
             ? "var(--current-day)"
             : "",
         color: color,
@@ -176,7 +153,9 @@ const DayCard = ({ day }) => {
             </Tooltip>
           </div>
           <span className={styles.textWeekend}>
-            {currentDate.getDate() === date.getDate() ? "Сегодня" : day.day}
+            {currentDate.toDateString() === date.toDateString()
+              ? "Сегодня"
+              : day.day}
           </span>
         </div>
       ) : (
@@ -197,7 +176,9 @@ const DayCard = ({ day }) => {
                 }}
                 className={styles.text}
               >
-                {currentDate.getDate() === date.getDate() ? "Сегодня" : day.day}
+                {currentDate.toDateString() === date.toDateString()
+                  ? "Сегодня"
+                  : day.day}
               </span>
             </div>
 
@@ -235,10 +216,12 @@ const DayCard = ({ day }) => {
             className={styles.cardWrapper}
           >
             <div key={day.day} className={styles.title}>
-              {currentDate.getDate() === date.getDate() ? "Сегодня" : day.day}
+              {currentDate.toDateString() === date.toDateString()
+                ? "Сегодня"
+                : day.day}
             </div>
             <div key={day.date} className={styles.subtitle}>
-              {currentDate.getDate() === date.getDate()
+              {currentDate.toDateString() === date.toDateString()
                 ? `${day.day}, ${day.date}`
                 : day.date}
             </div>
