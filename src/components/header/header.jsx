@@ -7,7 +7,7 @@ import Menu from "../menu/menu";
 import styles from "./header.module.css";
 
 // компонент хедера, принимающий пропсом функцию изменения группы
-const Header = ({ handleGroupChange, initialGroup }) => {
+const Header = ({ handleGroupChange, initialGroup, data }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [skipAnimation, setSkipAnimation] = useState(false); // Состояние для пропуска анимации
 
@@ -118,6 +118,7 @@ const Header = ({ handleGroupChange, initialGroup }) => {
             headerAnimation(true);
           }}
           initialValue={initialGroup}
+          data={data}
         />
         <Menu isOpen={isOpen} />
       </div>

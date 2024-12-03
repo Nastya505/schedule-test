@@ -1,39 +1,34 @@
 import React, { useState, useEffect } from "react";
 import styles from "./schedule.module.css";
-import dataJson from "../../utils/data.json";
 import Week from "../week/week";
 
-// компонент расписания принимающий пропсом группу
-function Schedule({ group }) {
-  const [data, setData] = useState([]);
-  // выбранная неделя
+// компонент расписания, принимающий пропсом группу
+function Schedule({ group, data }) {
   const [week, setWeek] = useState(null);
 
-  useEffect(() => {
-    setData(dataJson);
-  }, []);
+  // Проверяем, что данные загружены и что groups существует
+  const currentGroup = data?.groups
+    ? data.groups.find((item) => item.group === group)
+    : null;
 
-  // находим переданую группу в данных
-  const currentGroup =
-    data.groups && data.groups.find((item) => item.group === group);
+  // useEffect всегда будет вызываться, не зависит от того, была ли группа найдена
+  useEffect(() => {
+    if (currentGroup) {
+      setWeek(currentGroup.currentWeek);
+    }
+  }, [currentGroup]); // добавляем зависимости
 
   // текущая неделя
-  const currentWeek = currentGroup && currentGroup.currentWeek;
+  const currentWeek = currentGroup?.currentWeek;
   // предыдущая неделя
-  const prevWeek = currentGroup && currentGroup.prevWeek;
+  const prevWeek = currentGroup?.prevWeek;
   // следующая неделя
-  const nextWeek = currentGroup && currentGroup.nextWeek;
+  const nextWeek = currentGroup?.nextWeek;
 
   // обработчик клика
   const handleClick = (week) => {
     setWeek(week);
   };
-
-  useEffect(() => {
-    if (currentGroup) {
-      setWeek(currentWeek);
-    }
-  }, [data, group]);
 
   return (
     <div id="schedule" className={styles.wrapper}>

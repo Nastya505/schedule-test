@@ -131,11 +131,7 @@ const DayCard = ({ day }) => {
   return (
     <div
       style={{
-        height: clicked
-          ? day.day === "Понедельник"
-            ? "660px"
-            : "555px"
-          : "74px",
+        height: clicked ? "fit-content" : "74px",
         borderRadius: clicked ? "40px" : "25px",
         backgroundColor:
           !clicked && currentDate.toDateString() === date.toDateString()
@@ -174,7 +170,11 @@ const DayCard = ({ day }) => {
                   ...(clicked ? { opacity: 0 } : { opacity: 1 }),
                   ...!allClassDistance,
                 }}
-                className={styles.text}
+                className={
+                  day.day === "Понедельник" && allClassDistance
+                    ? styles.textMonday
+                    : styles.text
+                }
               >
                 {currentDate.toDateString() === date.toDateString()
                   ? "Сегодня"
@@ -207,9 +207,7 @@ const DayCard = ({ day }) => {
           <div
             style={{
               ...(clicked
-                ? day.day === "Понедельник"
-                  ? { opacity: 1, height: "660px" }
-                  : { opacity: 1, height: "555px" }
+                ? { opacity: 1, height: "fit-content", minHeight: "200px" }
                 : { opacity: 0, height: "0px" }),
               color: color,
             }}

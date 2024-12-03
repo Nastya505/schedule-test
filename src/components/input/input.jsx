@@ -1,55 +1,66 @@
 import React, { useState, useEffect } from "react";
 import styles from "./input.module.css";
-import dataJson from "../../utils/data.json";
 
 // данный компонент отвечает за ввод группы в поисковой строке и выбор группы из списка
-const Input = ({ animation, handleGroupChange, initialValue = "" }) => {
-  const [options, setOptions] = useState(null);
-  const [value, setValue] = useState("");
-
-  useEffect(() => {
-    setOptions(dataJson.groups);
-  }, []);
-  useEffect(() => {
-    if (initialValue) {
-      setValue(initialValue); // Устанавливаем начальное значение из пропса
-      animation(true); // Пропускаем анимацию, если значение загружено
-    }
-  }, [initialValue, animation]);
-
-  // Добавляем состояние для хранения предыдущего значения
+const Input = ({ animation, handleGroupChange, initialValue = "", data }) => {
+  const [options, setOptions] = useState([]);
+  const [value, setValue] = useState(initialValue); // Начальное значение из пропса
   const [previousValue, setPreviousValue] = useState("");
   const [active, setActive] = useState(false);
 
-  //  проверяет, что значение не пустое и что хотя бы один из вариантов
-  //  начинается с введенного значения (без учета регистра).
-  const showList =
-    value !== "" &&
-    options.some((d) => d.group.toLowerCase().startsWith(value.toLowerCase()));
+  // useEffect для обновления списка опций после загрузки данных
+  useEffect(() => {
+    if (data && data.groups) {
+      setOptions(data.groups); // Устанавливаем группы
+      console.log(data.groups); // Логируем полученные данные
+    }
+  }, [data]); // Зависимость от data
 
-  // функция для изменения состояния поисковой строки
+  useEffect(() => {
+    const savedGroup = localStorage.getItem("selectedGroup");
+    if (savedGroup) {
+      setValue(savedGroup); // Если группа сохранена, установим ее в значение инпута
+      animation(true); // Пропускаем анимацию
+    }
+  }, [animation]); // Будет выполняться при монтировании компонента
+
+  // useEffect для обработки начального значения, если оно есть
+  useEffect(() => {
+    if (initialValue) {
+      setValue(initialValue); // Устанавливаем начальное значение
+      animation(true); // Пропускаем анимацию
+    }
+  }, [initialValue, animation]);
+
+  // Фильтрация опций, если значение в поисковой строке не пустое
+  const filteredOptions = options.filter(
+    (d) =>
+      value === "" ||
+      (d.group && d.group.toLowerCase().includes(value.toLowerCase()))
+  );
+
+  // Функция для изменения значения в поле ввода
   const handleInputChange = (e) => {
     setValue(e.target.value);
-    setActive(true);
+    setActive(true); // Показываем список после изменения
   };
 
-  // функция для выбора группы
+  // Функция для обработки выбора опции из списка
   const handleOptionClick = (selectedOption) => {
     const selectedOptionExists = options.some(
       (option) => option.group.toLowerCase() === selectedOption.toLowerCase()
     );
-    if (selectedOptionExists) {
-      // Сравниваем текущее значение с предыдущим значением
-      if (value !== previousValue) {
-        setValue(selectedOption);
-        setActive(false);
-        animation(selectedOptionExists);
-        handleGroupChange(selectedOption);
-      }
+    if (selectedOptionExists && value !== previousValue) {
+      setValue(selectedOption); // Устанавливаем выбранное значение
+      setActive(false); // Скрываем список
+      animation(selectedOptionExists); // Запускаем анимацию
+      handleGroupChange(selectedOption); // Передаем выбранную группу в родительский компонент
     }
-    // Сохраняем текущее значение в качестве предыдущего значения
-    setPreviousValue(selectedOption);
+    setPreviousValue(selectedOption); // Сохраняем текущее значение как предыдущее
   };
+
+  // Показ списка вариантов (если значение не пустое)
+  const showList = value !== "" && filteredOptions.length > 0;
 
   return (
     <div id="input-wrapper" className={styles.inputWrapper}>
@@ -73,26 +84,18 @@ const Input = ({ animation, handleGroupChange, initialValue = "" }) => {
         value={value}
         onChange={handleInputChange}
         onFocus={() => setActive(true)}
-        onBlur={() => setActive(false)}
+        onBlur={() => setTimeout(() => setActive(false), 200)} // Задержка для предотвращения скрытия списка сразу
       />
-      {value && value.length > 0 && (
+      {showList && (
         <ul id="list" className={`${styles.list} ${active ? styles.show : ""}`}>
-          {showList &&
-            options
-              .filter(
-                (d) =>
-                  value === "" ||
-                  (d.group &&
-                    d.group.toLowerCase().includes(value.toLowerCase()))
-              )
-              .map((option) => (
-                <li
-                  key={option.group}
-                  onMouseDown={(e) => handleOptionClick(option.group)}
-                >
-                  {option.group}
-                </li>
-              ))}
+          {filteredOptions.map((option) => (
+            <li
+              key={option.group}
+              onMouseDown={() => handleOptionClick(option.group)} // Смена обработчика на onMouseDown
+            >
+              {option.group}
+            </li>
+          ))}
         </ul>
       )}
     </div>
