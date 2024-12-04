@@ -32,9 +32,7 @@ function App() {
   if (error) {
     return (
       <div className={styles.app}>
-        <p className={styles.text}>
-          Ошибка при загрузке данных: {error.message}
-        </p>
+        <p className={styles.text}>Ошибка при загрузке данных</p>
       </div>
     );
   }
