@@ -89,14 +89,12 @@
 }
 
 .sliderWeeksWrapper {
-  width: 301%;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
 .sliderWeeks {
   display: flex;
-  width: 100%;
   transition: all 0.5s;
   box-sizing: border-box;
   gap: 9px;

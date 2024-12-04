@@ -1,26 +1,28 @@
 .menu {
-    height: 0px;
-    display: none;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
-    color: var(--text-color-d);
-    width: 100%;
-    opacity: 0;
-  }
-  
-  .open {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-  }
-  
-  .menu p {
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    opacity: inherit;
-    transition: all 0.05s ease-in-out;
-  }
+  height: 0px;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  color: var(--text-color-d);
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.open {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 1;
+  gap: 10px;
+}
+
+.menu p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  opacity: inherit;
+  transition: all 0.05s ease-in-out;
+}

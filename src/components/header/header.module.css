@@ -1,6 +1,6 @@
-.headerWrapper{
-  position: sticky; 
-  top: 0; 
+.headerWrapper {
+  position: sticky;
+  top: 0;
   z-index: 10;
 }
 .header {
@@ -18,7 +18,7 @@
   height: 347px;
   justify-content: flex-end;
   align-items: center;
-  transition: all .5s;
+  transition: all 0.2s;
   margin: 5px;
   box-sizing: border-box;
 }

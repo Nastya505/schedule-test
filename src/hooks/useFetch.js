@@ -19,7 +19,6 @@ const useFetch = (url) => {
                 }
 
                 setData(parsedData); // Сохраняем данные
-                console.log(parsedData);
                 setError(null); // Сбрасываем ошибки
             } catch (err) {
                 setError(err.message); // Сохраняем сообщение об ошибке

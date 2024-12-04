@@ -12,7 +12,6 @@ const Input = ({ animation, handleGroupChange, initialValue = "", data }) => {
   useEffect(() => {
     if (data && data.groups) {
       setOptions(data.groups); // Устанавливаем группы
-      console.log(data.groups); // Логируем полученные данные
     }
   }, [data]); // Зависимость от data
 

@@ -1,0 +1,32 @@
+.footer {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.text {
+  margin: 0;
+  font-size: 14px;
+  color: #bfc8d0;
+}
+
+.links {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.link {
+  color: #bfc8d0;
+  text-decoration: none;
+  line-height: 150%;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

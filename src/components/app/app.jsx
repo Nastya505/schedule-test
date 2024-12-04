@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../header/header.jsx";
 import Schedule from "../schedule/schedule.jsx";
-import useFetch from "../../hooks/useFetch.js"; // Ваш хук для данных
-
-import styles from "./app.module.css";
+import useFetch from "../../hooks/useFetch.js";
+import styles from "./app.module.css"; // Ваш хук для данных
 
 function App() {
   const url = "http://109.172.114.134:8000"; // URL для вашего API
@@ -20,6 +19,25 @@ function App() {
       localStorage.setItem("selectedGroup", selectedGroup);
     }
   }, [selectedGroup]);
+
+  // Обработка состояния загрузки и ошибок
+  if (loading) {
+    return (
+      <div className={styles.app}>
+        <p className={styles.text}>Загрузка данных...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.app}>
+        <p className={styles.text}>
+          Ошибка при загрузке данных: {error.message}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.app}>

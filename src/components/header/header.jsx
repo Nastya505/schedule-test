@@ -33,6 +33,7 @@ const Header = ({ handleGroupChange, initialGroup, data }) => {
       alignItems: "end",
       justifyContent: "flex-end",
       boxShadow: "0px 4px 4px 0px #00000040",
+      duration: 0.1,
     });
     gsap.set("#input-wrapper", {
       maxWidth: "180px",

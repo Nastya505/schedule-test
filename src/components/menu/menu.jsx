@@ -1,15 +1,19 @@
-import React from 'react';
-import Theme from '../theme/theme';
+import React from "react";
+import Theme from "../theme/theme";
 
-import styles from "./menu.module.css"
+import styles from "./menu.module.css";
+import { Footer } from "../footer/footer";
 
 // компонент меню
-const Menu = ({isOpen}) => {
+const Menu = ({ isOpen }) => {
   return (
-    <div id="menu" className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
-        <Theme/>
-      </div>
-  )
-}
+    <div id="menu" className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
+      <Theme />
+      <p>
+        <Footer />
+      </p>
+    </div>
+  );
+};
 
-export default Menu
+export default Menu;

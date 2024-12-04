@@ -29,6 +29,9 @@ function Schedule({ group, data }) {
   const handleClick = (week) => {
     setWeek(week);
   };
+  const availableWeeks = [prevWeek, currentWeek, nextWeek].filter(
+    Boolean
+  ).length;
 
   return (
     <div id="schedule" className={styles.wrapper}>
@@ -134,24 +137,33 @@ function Schedule({ group, data }) {
         )}
       </div>
 
-      <div className={styles.sliderWeeksWrapper}>
+      <div
+        className={styles.sliderWeeksWrapper}
+        style={{
+          width: `${availableWeeks * 100}%`, // Устанавливаем ширину
+        }}
+      >
         <div
           className={styles.sliderWeeks}
           style={{
             transform: `translateX(${
               week === prevWeek
-                ? "33.3%"
+                ? availableWeeks === 3
+                  ? "33.3%"
+                  : "25%"
                 : week === nextWeek
-                ? "-33.3%"
-                : week === currentWeek
-                ? "0%"
+                ? availableWeeks === 3
+                  ? "-33.3%"
+                  : "-25%"
+                : availableWeeks === 2
+                ? "-25%"
                 : "0%"
-            })`,
+            })`, // Вычисляемое смещение
           }}
         >
-          <Week week={prevWeek} />
-          <Week week={currentWeek} />
-          <Week week={nextWeek} />
+          {availableWeeks >= 2 && <Week week={prevWeek} />}
+          {availableWeeks >= 1 && <Week week={currentWeek} />}
+          {availableWeeks >= 3 && <Week week={nextWeek} />}
         </div>
       </div>
     </div>
