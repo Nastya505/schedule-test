@@ -45,6 +45,20 @@ const Class = ({ time, course, rooms, date }) => {
     ? "var(--color-no-active)"
     : "var(--text-color)";
 
+  // Функция для безопасной обработки `rooms`
+  const renderRooms = () => {
+    return rooms
+      .filter((room) => room && room.room) // Фильтруем валидные комнаты
+      .filter(
+        (room) =>
+          room.place === "dormitory" ||
+          !["distance", "sports-hall", "gym", "conf-hall", "workshop"].includes(
+            room.place
+          )
+      ) // Исключаем ненужные place
+      .map((room, index) => <span key={index}>{room.room}</span>);
+  };
+
   return (
     <div key={date} style={{ color: color }} className={styles.class}>
       <div className={styles.info}>
@@ -168,34 +182,7 @@ const Class = ({ time, course, rooms, date }) => {
             ) : null}
           </div>
         ))}
-        {rooms.length === 1 ? (
-          /^[0-9]+$/.test(rooms[0].room) ||
-          (/[A-Za-zА-Яа-я]/.test(rooms[0].room) &&
-            /[0-9]/.test(rooms[0].room)) ? (
-            <span>{rooms[0].room}</span>
-          ) : null
-        ) : rooms.length === 2 ? (
-          <span>
-            {/^[0-9]+$/.test(rooms[0].room) ||
-            (/[A-Za-zА-Яа-я]/.test(rooms[0].room) &&
-              /[0-9]/.test(rooms[0].room))
-              ? rooms[0].room
-              : null}
-            {(/^[0-9]+$/.test(rooms[0].room) ||
-              (/[A-Za-zА-Яа-я]/.test(rooms[0].room) &&
-                /[0-9]/.test(rooms[0].room))) &&
-            (/^[0-9]+$/.test(rooms[1].room) ||
-              (/[A-Za-zА-Яа-я]/.test(rooms[1].room) &&
-                /[0-9]/.test(rooms[1].room))) ? (
-              <span style={{ opacity: "0.5" }}> | </span>
-            ) : null}
-            {/^[0-9]+$/.test(rooms[1].room) ||
-            (/[A-Za-zА-Яа-я]/.test(rooms[1].room) &&
-              /[0-9]/.test(rooms[1].room))
-              ? rooms[1].room
-              : null}
-          </span>
-        ) : null}
+        <span>{renderRooms()}</span>
       </div>
     </div>
   );
