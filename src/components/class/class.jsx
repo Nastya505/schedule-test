@@ -48,7 +48,7 @@ const Class = ({ time, course, rooms, date }) => {
   // Функция для безопасной обработки `rooms`
   const renderRooms = () => {
     return rooms
-      .filter((room) => room && room.room) // Фильтруем валидные комнаты
+      .filter((room) => room && room.room)
       .filter(
         (room) =>
           room.place === "dormitory" ||
@@ -56,6 +56,7 @@ const Class = ({ time, course, rooms, date }) => {
             room.place
           )
       ) // Исключаем ненужные place
+      .filter((room) => room.room !== "производство")
       .map((room, index) => <span key={index}>{room.room}</span>);
   };
 
