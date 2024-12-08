@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./footer.module.css";
+import styles from "./feedback.module.css";
 
-export const Footer = () => {
+export const Feedback = () => {
   return (
     <footer className={styles.footer}>
       <p className={styles.text}>Связаться с разработчиками:</p>

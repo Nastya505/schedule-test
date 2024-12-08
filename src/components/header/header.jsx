@@ -70,7 +70,7 @@ const Header = ({ handleGroupChange, initialGroup, data }) => {
     const tl = gsap.timeline();
     if (selectedOptionExists && !skipAnimation) {
       tl.to("#title", { display: "none", opacity: 0 });
-      tl.to("#header", {
+      gsap.set("#header", {
         opacity: 1,
         backgroundColor: "#292F34",
         color: "var(--text-color-d)",

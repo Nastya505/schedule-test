@@ -20,7 +20,7 @@ function App() {
     }
   }, [selectedGroup]);
 
-  // Обработка состояния загрузки и ошибок
+  window.scrollTo(0, 0);
   if (loading) {
     return (
       <div className={styles.app}>
