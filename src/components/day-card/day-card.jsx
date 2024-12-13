@@ -21,6 +21,7 @@ const allStartTimeMonday = [
 ];
 // время начало занятий в сокращенный понедельник
 const allStartTimeShortenedMonday = [
+  "08:20",
   "08:30",
   "09:40",
   "10:20",
@@ -50,6 +51,14 @@ const DayCard = ({ day }) => {
   // обработчик клика
   const handlerClick = () => {
     setClicked((clicked) => !clicked);
+  };
+  const subtractMinutes = (timeString, minutes) => {
+    const [hours, mins] = timeString.split(":").map(Number);
+    const date = new Date();
+    date.setHours(hours, mins - minutes, 0, 0); // Установить часы и минуты
+    const adjustedHours = date.getHours().toString().padStart(2, "0");
+    const adjustedMinutes = date.getMinutes().toString().padStart(2, "0");
+    return `${adjustedHours}:${adjustedMinutes}`;
   };
 
   const isShortenedDay = (day) => {
@@ -222,7 +231,11 @@ const DayCard = ({ day }) => {
               <div className={styles.time}>
                 {day.classes.length > 0 && day.classes[0].time.start}
                 <IoIosArrowRoundForward color={color} />
-                {lastClass ? lastClass.time.end : ""}
+                {lastClass
+                  ? isShortenedDay(day)
+                    ? subtractMinutes(lastClass.time.end, 30) // Сокращенное время
+                    : lastClass.time.end // Обычное время
+                  : ""}
               </div>
             </div>
           </div>
