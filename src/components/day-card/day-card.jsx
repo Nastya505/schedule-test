@@ -19,6 +19,17 @@ const allStartTimeMonday = [
   "16:35",
   "18:15",
 ];
+// время начало занятий в сокращенный понедельник
+const allStartTimeShortenedMonday = [
+  "08:30",
+  "09:40",
+  "10:20",
+  "11:30",
+  "12:30",
+  "13:00",
+  "14:10",
+  "15:20",
+];
 // время начало занятий со вторника по cубботу
 const allStartTimeEveryDay = [
   "08:30",
@@ -41,6 +52,11 @@ const DayCard = ({ day }) => {
     setClicked((clicked) => !clicked);
   };
 
+  const isShortenedDay = (day) => {
+    // Пример: проверка на конкретные даты
+    const shortenedDates = ["16.12.2024"]; // Даты сокращенных дней
+    return shortenedDates.includes(day.date);
+  };
   // находим последнее занятие
   const lastClass = day.classes[day.classes.length - 1];
 
@@ -74,11 +90,14 @@ const DayCard = ({ day }) => {
   // определяем время начала занятий в зависимости от дня недели
   const getStartTime = (day) => {
     if (day.day === "Понедельник") {
-      return allStartTimeMonday;
+      return isShortenedDay(day)
+        ? allStartTimeShortenedMonday
+        : allStartTimeMonday;
     } else {
       return allStartTimeEveryDay;
     }
   };
+
   let hasLunchBeenAdded = false;
 
   // заполняем расписание на день
@@ -92,7 +111,11 @@ const DayCard = ({ day }) => {
         };
       }
       let classInfo = day.classes.find((item) => item.time.start === time);
-      if (time === "13:35" || (time === "14:15" && !hasLunchBeenAdded)) {
+      if (
+        time === "13:35" ||
+        time === "12:30" ||
+        (time === "14:15" && !hasLunchBeenAdded)
+      ) {
         hasLunchBeenAdded = true;
         return {
           time: time,
