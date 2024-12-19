@@ -9,9 +9,9 @@ const Menu = ({ isOpen }) => {
   return (
     <div id="menu" className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
       <Theme />
-      <p>
+      <div>
         <Feedback />
-      </p>
+      </div>
     </div>
   );
 };

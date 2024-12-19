@@ -3,8 +3,8 @@ import styles from "./feedback.module.css";
 
 export const Feedback = () => {
   return (
-    <footer className={styles.footer}>
-      <p className={styles.text}>Связаться с разработчиками:</p>
+    <div className={styles.footer}>
+      <div className={styles.text}>Связаться с разработчиками:</div>
       <div className={styles.links}>
         <a
           href="https://t.me/ANASTAssssssssssss"
@@ -23,6 +23,6 @@ export const Feedback = () => {
           @arduinoespruino
         </a>
       </div>
-    </footer>
+    </div>
   );
 };

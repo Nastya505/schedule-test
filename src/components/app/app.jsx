@@ -24,7 +24,7 @@ function App() {
   if (loading) {
     return (
       <div className={styles.app}>
-        <p className={styles.text}>Загрузка данных...</p>
+        <div className={styles.text}>Загрузка данных...</div>
       </div>
     );
   }
@@ -32,11 +32,10 @@ function App() {
   if (error) {
     return (
       <div className={styles.app}>
-        <p className={styles.text}>Ошибка при загрузке данных</p>
+        <div className={styles.text}>Ошибка при загрузке данных</div>
       </div>
     );
   }
-
   return (
     <div className={styles.app}>
       <Header
