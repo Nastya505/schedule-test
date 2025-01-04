@@ -7,7 +7,6 @@ import styles from "./app.module.css"; // Ваш хук для данных
 function App() {
   const url = "https://ncopit.ru:8000/"; // URL для вашего API
   const { data, loading, error } = useFetch(url); // Хук для получения данных
-
   // Загружаем выбранную группу из localStorage, если она есть
   const [selectedGroup, setSelectedGroup] = useState(() => {
     return localStorage.getItem("selectedGroup") || "";

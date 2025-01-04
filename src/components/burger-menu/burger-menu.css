@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   transform: translate(30%, 30%);
+  transform-origin: center;
 }
 
 .burger-menu {
@@ -17,7 +18,6 @@
   display: none;
   outline: none;
 }
-
 #line1,
 #line2,
 #line3,
@@ -31,25 +31,33 @@
   height: 3px;
   background-color: var(--text-color-d);
   transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  will-change: transform;
 }
 
 #line1 {
-  transform: translate(-50%, -8px);
+  top: calc(50% - 5px);
 }
 
 #line2 {
-  transform: translate(-50%, -45%);
+  top: calc(50%);
 }
 
 #line3 {
-  transform: translate(-50%, 5px);
+  top: calc(50% + 5px);
 }
 
 #line4 {
-  transform: translate(-50%, -45%) rotate(-45deg);
+  top: calc(50%);
+  left: 30%;
+  transform: rotate(-45deg);
   display: none;
 }
+
 #line5 {
-  transform: translate(-50%, -45%) rotate(45deg);
+  top: calc(50%);
+  left: 30%;
+  transform: rotate(45deg);
   display: none;
 }

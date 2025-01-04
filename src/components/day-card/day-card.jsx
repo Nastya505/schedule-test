@@ -48,10 +48,19 @@ const DayCard = ({ day }) => {
   // состояние карточки(открыта или нет)
   const [clicked, setClicked] = React.useState(false);
 
-  // обработчик клика
-  const handlerClick = () => {
+  // Обработчик клика на карточку для разворачивания
+  const handleCardClick = () => {
+    if (!clicked) {
+      setClicked(true);
+    }
+  };
+
+  // Обработчик клика на кнопку для сворачивания
+  const handleButtonClick = (e) => {
+    e.stopPropagation(); // Предотвращаем обработку клика карточки
     setClicked((clicked) => !clicked);
   };
+
   const subtractMinutes = (timeString, minutes) => {
     const [hours, mins] = timeString.split(":").map(Number);
     const date = new Date();
@@ -152,10 +161,6 @@ const DayCard = ({ day }) => {
         if (item.time === "10:00" && item.course === "") {
           return false;
         }
-        if (item.time === "16:35" && item.course === "") {
-          return false;
-        }
-        return true;
       }
       return true;
     });
@@ -172,6 +177,7 @@ const DayCard = ({ day }) => {
         color: color,
       }}
       className={styles.card}
+      onClick={handleCardClick}
     >
       {day.classes.length === 0 ? (
         <div className={styles.cardHeaderWeekend}>
@@ -190,7 +196,7 @@ const DayCard = ({ day }) => {
         <>
           <div className={styles.cardHeader}>
             <div className={styles.right}>
-              <button onClick={handlerClick} className={styles.button}>
+              <button onClick={handleButtonClick} className={styles.button}>
                 <MdArrowOutward
                   color="var(--text-color)"
                   size={24}
