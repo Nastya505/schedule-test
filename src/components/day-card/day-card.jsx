@@ -260,13 +260,13 @@ const DayCard = ({ day }) => {
                 ? "Сегодня"
                 : day.day}
             </div>
-            <div key={day.date} className={styles.subtitle}>
+            <div key={`${day.day}-${day.data}`} className={styles.subtitle}>
               {currentDate.toDateString() === date.toDateString()
                 ? `${day.day}, ${day.date}`
                 : day.date}
             </div>
             <div className={styles.classes}>
-              {schedule.map((item) => (
+              {schedule.map((item, index) => (
                 <>
                   {item.course === "обед" ? (
                     <div className={styles.break}>
@@ -287,7 +287,7 @@ const DayCard = ({ day }) => {
                     </div>
                   ) : (
                     <Class
-                      key={item.date}
+                      key={index}
                       time={item.time}
                       course={item.course}
                       rooms={item.rooms}

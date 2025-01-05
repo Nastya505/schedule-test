@@ -1,6 +1,6 @@
-import React from 'react';
-import DayCard from '../day-card/day-card';
-import styles from './week.module.css';
+import React from "react";
+import DayCard from "../day-card/day-card";
+import styles from "./week.module.css";
 
 // компонент с расписанием на неделю
 const Week = ({ week }) => {
@@ -10,8 +10,8 @@ const Week = ({ week }) => {
 
   return (
     <div className={styles.week}>
-      {week.days.map((day) => {
-        return <DayCard key={day.date} day={day}/>
+      {week.days.map((day, index) => {
+        return <DayCard key={index} day={day} />;
       })}
     </div>
   );
