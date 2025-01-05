@@ -24,7 +24,6 @@
 #line4,
 #line5 {
   position: absolute;
-  top: 50%;
   left: 50%;
   display: block;
   width: 21px;
@@ -37,7 +36,7 @@
 }
 
 #line1 {
-  top: calc(50% - 5px);
+  top: calc(50% - 4.7px);
 }
 
 #line2 {
@@ -60,4 +59,13 @@
   left: 30%;
   transform: rotate(45deg);
   display: none;
+}
+@supports (-moz-appearance: none) {
+  #line1 {
+    top: calc(50% - 5px); /* Firefox */
+  }
+
+  #line3 {
+    top: calc(50% + 4.5px); /* Firefox */
+  }
 }
