@@ -177,7 +177,7 @@ const DayCard = ({ day }) => {
         color: color,
       }}
       className={styles.card}
-      onClick={handleCardClick}
+      onClick={day.classes.length === 0 ? "" : handleCardClick}
     >
       {day.classes.length === 0 ? (
         <div className={styles.cardHeaderWeekend}>
@@ -255,12 +255,20 @@ const DayCard = ({ day }) => {
             }}
             className={styles.cardWrapper}
           >
-            <div key={day.day} className={styles.title}>
+            <div
+              onClick={handleButtonClick}
+              key={day.day}
+              className={styles.title}
+            >
               {currentDate.toDateString() === date.toDateString()
                 ? "Сегодня"
                 : day.day}
             </div>
-            <div key={`${day.day}-${day.data}`} className={styles.subtitle}>
+            <div
+              onClick={handleButtonClick}
+              key={`${day.day}-${day.data}`}
+              className={styles.subtitle}
+            >
               {currentDate.toDateString() === date.toDateString()
                 ? `${day.day}, ${day.date}`
                 : day.date}
